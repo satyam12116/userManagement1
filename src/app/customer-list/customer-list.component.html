@@ -1,0 +1,21 @@
+<h2>User List</h2>
+<div class="container">
+  <div *ngFor="let customer of customers">
+    <div>
+      <mat-card>
+        <div style="text-align: right">
+          <mat-icon (click)="update(customer)" >edit</mat-icon>
+          <mat-icon (click)="delete(customer)" >delete</mat-icon>
+        </div>
+        <div>Customer Id: {{ customer.email }}</div>
+        <div>Name : {{ customer.fist_name +"  "+ customer.last_name }}</div>
+        <div>Address : {{ customer.state }}</div>
+        <div>Date of Registration : "2023-02-09"</div>
+        <div>Phone No : {{ customer.contact_no }}</div>
+        <div>Email : {{ customer.email }}</div>
+
+      </mat-card>
+    </div>
+  </div>
+</div>
+
